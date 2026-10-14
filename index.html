@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nokia Music Box</title>
+<style>
+body{margin:8px;font-family:Arial,Helvetica,sans-serif;font-size:16px;color:#111;background:#fff}h1{font-size:22px;margin:8px 0 4px}h2{font-size:18px;margin:16px 0 6px;border-bottom:1px solid #aaa;padding-bottom:3px}p{margin:7px 0}.note{border:1px solid #777;padding:8px;margin:10px 0}input{max-width:95%;font-size:16px;margin:4px 0}.song{padding:8px 0;border-bottom:1px solid #ddd}.song a{display:inline-block;padding:4px 0}a{color:#0645ad}.small{font-size:13px;color:#333}ul{padding-left:22px}
+</style></head><body>
+<h1>Nokia Music Box</h1><p>Simple music links for Opera Mini and basic phones.</p>
+<div class="note"><strong>Using your own MP3s:</strong><p>To make your songs available to your Nokia over the internet, upload MP3 files into this website's <code>music</code> folder when you host it. Then add each filename to the list below in <code>index.html</code>. This static version does not upload files to the server by itself.</p></div>
+<h2>Find a song</h2><p><label for="search">Search this list:</label><br><input id="search" type="text" onkeyup="filterSongs()" placeholder="Song or artist"></p>
+<h2>My MP3 collection</h2><div id="songs"><div class="song"><strong>Example: My Song</strong><br><span class="small">Replace this example with your own uploaded MP3.</span><br><a href="music/REPLACE-WITH-YOUR-SONG.mp3">Download MP3</a></div></div>
+<h2>Free and legal music</h2><p>Some tracks on these sites have download options. Check the licence and permission for each track.</p><ul>
+<li><a href="https://freemusicarchive.org/">Free Music Archive</a> — independent music; licences vary.</li><li><a href="https://archive.org/details/audio">Internet Archive: Audio</a> — look for public-domain or openly licensed recordings.</li><li><a href="https://musopen.org/music/">Musopen</a> — classical music; availability and licences vary.</li><li><a href="https://ccmixter.org/">ccMixter</a> — Creative Commons music; check each track's terms.</li></ul>
+<h2>How to use on your Nokia</h2><ol><li>Open this website in Opera Mini.</li><li>Choose a song and tap its download link.</li><li>If asked where to save it, choose the memory card if available.</li><li>Open Music or Gallery on the phone and play the MP3.</li></ol><p class="small">Tip: use simple filenames such as song01.mp3. The phone may not play every file if its encoding is unsupported.</p>
+<script>function filterSongs(){var input=document.getElementById('search');var term=(input.value||'').toLowerCase();var items=document.getElementById('songs').getElementsByClassName('song');for(var i=0;i<items.length;i++){var text=(items[i].textContent||items[i].innerText||'').toLowerCase();items[i].style.display=text.indexOf(term)>=0?'':'none';}}</script>
+</body></html>
